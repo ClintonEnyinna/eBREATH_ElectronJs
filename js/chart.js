@@ -1,30 +1,50 @@
-function onReceive(event) {
-  myChart.config.data.datasets[event.index].data.push({
-    x: event.timestamp,
-    y: event.value,
-  });
-  myChart.update({
-    preservation: true,
-  });
+
+var counter = 0;
+var graph = [];
+var lab = [];
+for(var i = 0; i<300; i++){
+  graph.push(0);
+  lab.push(i);
 }
 
-const config = {
+
+function onReceive(event){
+  
+    let container = myChart.config.data.datasets[event.index].data.slice(0);
+    //myChart.config.data.datasets[event.index].data[counter] = event.value;
+
+    container[counter] = event.value;
+    if(counter === container.length -1){
+      counter = 0;
+    }else{
+      container[counter + 1] = undefined;
+      counter++;
+    }
+
+    myChart.config.data.datasets[event.index].data = container;
+    myChart.update();
+  
+}
+
+var config = {
   type: 'line',
   data: {
+    labels: lab,
     datasets: [
       {
-        label: 'Volume',
+        //label: 'volume',
         backgroundColor: 'rgb(54, 162, 235)',
         borderColor: 'rgb(54, 162, 235)',
         fill: false,
         cubicInterpolationMode: 'monotone',
-        data: [],
+        data: graph,
+        //data:[]
       },
     ],
   },
   options: {
     title: {
-      display: true,
+      display: false,
       text: 'eBREATH',
     },
     responsive: true,
@@ -37,19 +57,21 @@ const config = {
     scales: {
       xAxes: [
         {
-          type: 'realtime',
+          /*type: 'realtime',
           realtime: {
             duration: 20000,
             delay: 2000,
-          },
+            
+          },*/
+          display: false
         },
       ],
       yAxes: [
         {
-          scaleLabel: {
+          /*scaleLabel: {
             display: true,
             labelString: 'value',
-          },
+          },*/
         },
       ],
     },

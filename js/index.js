@@ -9,14 +9,14 @@ const connect = (port) => {
   });
 
   let parser = mySerial.pipe(new Readline());
-
+ 
   mySerial.on('open', (_) => {
     console.log('Serial started');
     parser.on('data', (data) => {
       console.log(data);
       onReceive({
         index: 0,
-        timestamp: Date.now(),
+        //timestamp: Date.now(),
         value: data,
       });
     });
