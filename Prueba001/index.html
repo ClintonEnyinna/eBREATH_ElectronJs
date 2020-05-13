@@ -18,7 +18,7 @@
 <body>
     <!-- Design up-->
     <div class="head" >
-        <h2 id="probando">Volumen SIMV+PS</h2>
+        <h2>Volumen SIMV+PS</h2>
     </div>
     <div class="head2">
         <img src="img/e.png">
@@ -142,7 +142,7 @@
         circleShape: "full",
         handleShape: "dot",
         lineCap: "butt",
-
+        update:"onValueChange",
         svgMode: true,
         borderWidth: 1,
         borderColor: "#181818",
@@ -171,7 +171,7 @@
         circleShape: "full",
         handleShape: "dot",
         lineCap: "butt",
-
+        update:"onValueChange",
         svgMode: true,
         borderWidth: 1,
         borderColor: "#181818",
@@ -180,8 +180,13 @@
         tooltipColor: "#fff",
     });
 
-
-    function onValueChange (e) {
+    //Data slider
+    function onValueChange () {
+       let  firstData= $('#slider').roundSlider('getValue');
+       let  secondData= $('#slider2').roundSlider('getValue');
+       let  thirdData= $('#slider3').roundSlider('getValue');
+    
+       let  SilerData = [firstData, secondData,thirdData];
        
 }
 </script>
