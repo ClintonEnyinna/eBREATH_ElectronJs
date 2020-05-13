@@ -1,0 +1,235 @@
+body {
+  background-color: #303031;
+}
+.head {
+  background-color: #252525;
+  width: 504px;
+  height: 60px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.head h2 {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #c6c1c1;
+  top: -7%;
+  left: 5%;
+}
+.head2 {
+  background-color: #383737;
+  width: 504px;
+  height: 60px;
+  position: absolute;
+  top: 0%;
+  left: 504px;
+}
+.head2 h2 {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #c6c1c1;
+  top: -7%;
+  right: 5%;
+}
+.head2 img {
+  width: 5%;
+  top: 30%;
+  right: 26.3%;
+  position: absolute;
+}
+
+.left {
+  position: absolute;
+  top: 60px;
+  left: 0%;
+  width: 190px;
+  height: 355px;
+}
+
+.left .container {
+  position: relative;
+  width: 90%;
+  left: 4%;
+  margin-top: 5px;
+  height: 18.4%;
+  background-color: #454343;
+}
+.container h3 {
+  position: absolute;
+  left: 20%;
+  top: -42%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 250%;
+}
+.container h5 {
+  position: absolute;
+  font-size: 100%;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  top: -20%;
+  right: 7%;
+  text-align: center;
+  color: white;
+}
+
+.right {
+  position: absolute;
+  top: 60px;
+  left: 190px;
+  width: 818px;
+  height: 355px;
+}
+.Down {
+  position: absolute;
+  top: 415px;
+  left: 0px;
+  width: 1008px;
+  height: 126px;
+  text-align: center;
+}
+.Down img {
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.3;
+}
+.Down .SliderFirst {
+  position: absolute;
+  z-index: 100;
+  left: 20.5%;
+  top: 5%;
+  font-size: 85%;
+}
+.Down .SliderSecond {
+  position: absolute;
+  z-index: 100;
+  left: 45.5%;
+  top: 5%;
+  font-size: 85%;
+}
+.Down .SliderThird {
+  position: absolute;
+  z-index: 100;
+  left: 71.5%;
+  top: 5%;
+  font-size: 85%;
+}
+.Down .style1 {
+  position: absolute;
+  left: 22.49%;
+  top: 10%;
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border-style: ridge;
+  border-width: 8px;
+  border-color: #1b1b1b;
+
+  background: #272727;
+}
+.Down .style2 {
+  position: absolute;
+  left: 47.49%;
+  top: 10%;
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border-style: ridge;
+  border-width: 8px;
+  border-color: #1b1b1b;
+  background: #272727;
+}
+
+.Down .style3 {
+  position: absolute;
+  left: 73.49%;
+  top: 10%;
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border-style: ridge;
+  border-width: 8px;
+  border-color: #1b1b1b;
+  background: #272727;
+}
+
+.style1 h5 {
+  position: absolute;
+  color: white;
+  font-size: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 35%;
+  top: 23%;
+}
+.style2 h5 {
+  position: absolute;
+  color: white;
+  font-size: 75%;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 27%;
+  top: 27%;
+}
+.style3 h5 {
+  position: absolute;
+  color: white;
+  font-size: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 35%;
+  top: 23%;
+}
+
+.Down .txt1 {
+  color: #efefef;
+  font-size: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 23.5%;
+  top: 73%;
+}
+.Down .txt2 {
+  color: #efefef;
+  font-size: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 48%;
+  top: 73%;
+}
+.Down .txt3 {
+  color: #efefef;
+  font-size: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 72.5%;
+  top: 73%;
+}
+.right .Graphic1 {
+  position: absolute;
+  height: 108px;
+  width: 810px;
+  border-bottom: 3px solid #1e1e1e;
+}
+.right .Graphic2 {
+  position: absolute;
+  top: 33%;
+  height: 108px;
+  width: 810px;
+  border-bottom: 3px solid #1e1e1e;
+}
+.right .Graphic3 {
+  position: absolute;
+  top: 66%;
+  height: 108px;
+  width: 810px;
+  border-bottom: 3px solid #1e1e1e;
+}
