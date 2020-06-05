@@ -30,6 +30,7 @@ const connect = (port) => {
       });
       
     });
+    $('#activo').prop('checked', true);
     mySerial.write('connected');
   });
 
@@ -40,6 +41,7 @@ const connect = (port) => {
 
   mySerial.on('error', function (err) {
     console.log('Error: ', err.message);
+    $('#activo').prop('checked', false);
     reconnect(port);
   });
 };
@@ -47,8 +49,14 @@ const connect = (port) => {
 const reconnect = (port) => {
   setTimeout(function () {
     console.log('Reconnecting to Esp');
+    onReceive({
+        index: 0, 
+        v: 0,
+        f: 0,
+        p: 0
+      });
     connect(port);
-  }, 2000);
+  }, 1000);
 };
 
 const startConnection = () => {
@@ -66,7 +74,10 @@ const startConnection = () => {
             }
           }
         });
-        if (foundPort == false) console.log('Esp not found!');
+        if (foundPort == false){
+          console.log('Esp not found!');
+          $('#activo').prop('checked', false);
+        }
       } else console.log('no port available');
     })
     .catch((err) => console.log(err));
